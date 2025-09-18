@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio_/core/constant/padding.dart';
+import 'package:portfolio_/feature/home_screen/presentation/widgets/hover_button.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key});
@@ -25,50 +26,76 @@ class HeaderSection extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            "safrid",
+          HoverButton(
+            id: "Safrid",
+            builder: (isHovered) {
+              return Text(
+                "safrid",
 
-            style: style.labelLarge!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-              color: Colors.white,
-            ),
+                style: style.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22,
+                  color: isHovered ? Colors.cyan : Colors.white,
+                ),
+              );
+            },
           ),
           Spacer(),
-          Text(
-            "About",
-            style: style.labelLarge!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-              color: Colors.white,
-            ),
+          HoverButton(
+            id: "About",
+            builder: (isHovered) {
+              return Text(
+                "About",
+                style: style.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22,
+                  color: isHovered ? Colors.cyan : Colors.white,
+                ),
+              );
+            },
           ),
           SizedBox(width: 10.w),
-          Text(
-            "Projects",
-            style: style.labelLarge!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-              color: Colors.white,
-            ),
+          HoverButton(
+            id: "Projects",
+
+            builder: (isHovered) {
+              return Text(
+                "Projects",
+                style: style.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22,
+                  color: isHovered ? Colors.cyan : Colors.white,
+                ),
+              );
+            },
           ),
           SizedBox(width: 10.w),
-          Text(
-            "Skills",
-            style: style.labelLarge!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-              color: Colors.white,
-            ),
+          HoverButton(
+            id: "Skills",
+            builder: (isHovered) {
+              return Text(
+                "Skills",
+                style: style.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22,
+                  color: isHovered ? Colors.cyan : Colors.white,
+                ),
+              );
+            },
           ),
           SizedBox(width: 10.w),
-          Text(
-            "Contact",
-            style: style.labelLarge!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-              color: Colors.white,
-            ),
+          HoverButton(
+            id: "Contact",
+            builder: (isHovered) {
+              return Text(
+                "Contact",
+                style: style.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22,
+                  color: isHovered ? Colors.cyan : Colors.white,
+                ),
+              );
+            },
           ),
         ],
       ),
